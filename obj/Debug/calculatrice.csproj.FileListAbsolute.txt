@@ -1,0 +1,10 @@
+C:\Users\hdavo\source\repos\calculatrice\calculatrice\bin\Debug\calculatrice.exe.config
+C:\Users\hdavo\source\repos\calculatrice\calculatrice\bin\Debug\calculatrice.exe
+C:\Users\hdavo\source\repos\calculatrice\calculatrice\bin\Debug\calculatrice.pdb
+C:\Users\hdavo\source\repos\calculatrice\calculatrice\obj\Debug\calculatrice.csproj.AssemblyReference.cache
+C:\Users\hdavo\source\repos\calculatrice\calculatrice\obj\Debug\calculatrice.Calculatrice.resources
+C:\Users\hdavo\source\repos\calculatrice\calculatrice\obj\Debug\calculatrice.Properties.Resources.resources
+C:\Users\hdavo\source\repos\calculatrice\calculatrice\obj\Debug\calculatrice.csproj.GenerateResource.cache
+C:\Users\hdavo\source\repos\calculatrice\calculatrice\obj\Debug\calculatrice.csproj.CoreCompileInputs.cache
+C:\Users\hdavo\source\repos\calculatrice\calculatrice\obj\Debug\calculatrice.exe
+C:\Users\hdavo\source\repos\calculatrice\calculatrice\obj\Debug\calculatrice.pdb
