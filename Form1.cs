@@ -126,11 +126,63 @@ namespace calculatrice
             }
         }
 
-
+        //operators
         private void b_plus_Click(object sender, EventArgs e)
         {
-            currentInput += b_plus.Text;
+            currentInput += "+";
             UpdateLabelText(currentInput);
+        }
+
+        private void b_minus_Click(object sender, EventArgs e)
+        {
+            currentInput += "-";
+            UpdateLabelText(currentInput);
+        }
+
+        private void b_mutliply_Click(object sender, EventArgs e)
+        {
+            currentInput += "*";
+            UpdateLabelText(currentInput);
+        }
+        private void b_divide_Click(object sender, EventArgs e)
+        {
+            currentInput += "/";
+            UpdateLabelText(currentInput);
+
+        }
+
+        //quand le bouton egual est cliquer
+        private void B_egual_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                //Remplace les symboles spéciaux par les bons opérateurs
+                string expression = currentInput.Replace("×", "*").Replace("÷", "/");
+
+                //calcul de l'expression
+                DataTable table = new DataTable();
+                object resultObj = table.Compute(expression, "");
+
+                double result = Convert.ToDouble(resultObj);
+
+                // Affichage
+                UpdateLabelText(result.ToString());
+
+                // Mise à jour des variables pour les futurs calculs
+                currentInput = result.ToString();
+                firstOperand = result;
+                isNewInput = true;
+            }
+            catch
+            {
+                UpdateLabelText("Erreur");
+            }
+        }
+
+        private void b_clear_Click(object sender, EventArgs e)
+        {
+            currentInput = "";
+            UpdateLabelText("");
         }
     }
 }

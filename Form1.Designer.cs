@@ -33,11 +33,10 @@ namespace calculatrice
         {
             this.P_background_numbers_symbols = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button15 = new System.Windows.Forms.Button();
+            this.b_clear = new System.Windows.Forms.Button();
             this.b_7 = new System.Windows.Forms.Button();
             this.b_4 = new System.Windows.Forms.Button();
             this.b_1 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.b_8 = new System.Windows.Forms.Button();
             this.b_5 = new System.Windows.Forms.Button();
@@ -75,11 +74,10 @@ namespace calculatrice
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Black;
-            this.panel1.Controls.Add(this.button15);
+            this.panel1.Controls.Add(this.b_clear);
             this.panel1.Controls.Add(this.b_7);
             this.panel1.Controls.Add(this.b_4);
             this.panel1.Controls.Add(this.b_1);
-            this.panel1.Controls.Add(this.button11);
             this.panel1.Controls.Add(this.button10);
             this.panel1.Controls.Add(this.b_8);
             this.panel1.Controls.Add(this.b_5);
@@ -100,18 +98,19 @@ namespace calculatrice
             this.panel1.Size = new System.Drawing.Size(333, 256);
             this.panel1.TabIndex = 0;
             // 
-            // button15
+            // b_clear
             // 
-            this.button15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(88)))), ((int)(((byte)(88)))));
-            this.button15.FlatAppearance.BorderSize = 0;
-            this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button15.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button15.Location = new System.Drawing.Point(1, 1);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(82, 50);
-            this.button15.TabIndex = 19;
-            this.button15.Text = "=";
-            this.button15.UseVisualStyleBackColor = false;
+            this.b_clear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(88)))), ((int)(((byte)(88)))));
+            this.b_clear.FlatAppearance.BorderSize = 0;
+            this.b_clear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.b_clear.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.b_clear.Location = new System.Drawing.Point(1, 1);
+            this.b_clear.Name = "b_clear";
+            this.b_clear.Size = new System.Drawing.Size(82, 50);
+            this.b_clear.TabIndex = 19;
+            this.b_clear.Text = "C";
+            this.b_clear.UseVisualStyleBackColor = false;
+            this.b_clear.Click += new System.EventHandler(this.b_clear_Click);
             // 
             // b_7
             // 
@@ -154,19 +153,6 @@ namespace calculatrice
             this.b_1.Text = "1";
             this.b_1.UseVisualStyleBackColor = false;
             this.b_1.Click += new System.EventHandler(this.b_1_Click);
-            // 
-            // button11
-            // 
-            this.button11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(88)))), ((int)(((byte)(88)))));
-            this.button11.FlatAppearance.BorderSize = 0;
-            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button11.Location = new System.Drawing.Point(1, 205);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(82, 50);
-            this.button11.TabIndex = 15;
-            this.button11.Text = "=";
-            this.button11.UseVisualStyleBackColor = false;
             // 
             // button10
             // 
@@ -229,9 +215,9 @@ namespace calculatrice
             this.b_0.FlatAppearance.BorderSize = 0;
             this.b_0.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b_0.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.b_0.Location = new System.Drawing.Point(84, 205);
+            this.b_0.Location = new System.Drawing.Point(1, 205);
             this.b_0.Name = "b_0";
-            this.b_0.Size = new System.Drawing.Size(82, 50);
+            this.b_0.Size = new System.Drawing.Size(165, 50);
             this.b_0.TabIndex = 10;
             this.b_0.Text = "0";
             this.b_0.UseVisualStyleBackColor = false;
@@ -318,6 +304,7 @@ namespace calculatrice
             this.B_egual.TabIndex = 4;
             this.B_egual.Text = "=";
             this.B_egual.UseVisualStyleBackColor = false;
+            this.B_egual.Click += new System.EventHandler(this.B_egual_Click);
             // 
             // b_plus
             // 
@@ -345,6 +332,7 @@ namespace calculatrice
             this.b_minus.TabIndex = 2;
             this.b_minus.Text = "−";
             this.b_minus.UseVisualStyleBackColor = false;
+            this.b_minus.Click += new System.EventHandler(this.b_minus_Click);
             // 
             // b_mutliply
             // 
@@ -358,6 +346,7 @@ namespace calculatrice
             this.b_mutliply.TabIndex = 1;
             this.b_mutliply.Text = "×";
             this.b_mutliply.UseVisualStyleBackColor = false;
+            this.b_mutliply.Click += new System.EventHandler(this.b_mutliply_Click);
             // 
             // b_divide
             // 
@@ -371,6 +360,7 @@ namespace calculatrice
             this.b_divide.TabIndex = 0;
             this.b_divide.Text = "÷";
             this.b_divide.UseVisualStyleBackColor = false;
+            this.b_divide.Click += new System.EventHandler(this.b_divide_Click);
             // 
             // P_historique
             // 
@@ -437,7 +427,6 @@ namespace calculatrice
         private Button b_mutliply;
         private Button b_divide;
         private Button b_dot;
-        private Button button11;
         private Button button10;
         private Button b_8;
         private Button b_5;
@@ -447,7 +436,7 @@ namespace calculatrice
         private Button b_9;
         private Button b_6;
         private Button b_3;
-        private Button button15;
+        private Button b_clear;
         private Button b_7;
         private Button b_4;
         private Button b_1;
